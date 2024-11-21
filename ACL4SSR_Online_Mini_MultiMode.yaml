@@ -1,3 +1,13 @@
+# acl4SSR规则-在线版
+# 去广告：支持
+# 自动测速：支持
+# 微软分流：不支持
+# 苹果分流：不支持
+# 增强中国IP段：不支持
+# 增强国外GFW：不支持
+# 基于ACL4SSR_Online_Mini_MultiMode.ini
+# 制作日期:2024-11-21
+
 proxy-groups:
   - name: 🚀 节点选择
     type: select
