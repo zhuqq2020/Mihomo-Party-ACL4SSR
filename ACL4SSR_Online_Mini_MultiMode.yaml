@@ -126,8 +126,9 @@ rule-providers:
     type: http
 
 rules:
-  #10.0.0.0/24为本人自用网段，可删除
+  #10.0.0.0/24和192.168.168.0/24为本人自用网段，可删除
   - IP-CIDR,10.0.0.0/24,♻️ 自动选择
+  - IP-CIDR,192.168.168.0/24,♻️ 自动选择  
   - "RULE-SET,LocalAreaNetwork,🎯 全球直连"
   - "RULE-SET,UnBan,🎯 全球直连"
   - "RULE-SET,GoogleCN,🎯 全球直连"
