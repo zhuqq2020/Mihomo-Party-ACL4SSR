@@ -3,12 +3,12 @@
 #制作日期：2024-11-25
 
 proxy-groups:
-  - name: 节点选择
+  - name: 🚀 节点选择
     type: select
     proxies:
-      - 自动选择
+      - ♻️ 自动选择
 
-  - name: 自动选择
+  - name: ♻️ 自动选择
     type: url-test
     include-all: true
     url: https://www.gstatic.com/generate_204
@@ -17,8 +17,8 @@ proxy-groups:
 
 rules:
   #10.0.0.0/24和192.168.168.0/24为本人自用网段，可删除
-  - IP-CIDR,10.0.0.0/24,自动选择
-  - IP-CIDR,192.168.168.0/24,自动选择  
+  - IP-CIDR,10.0.0.0/24,♻️ 自动选择
+  - IP-CIDR,192.168.168.0/24,♻️ 自动选择
   - AND,((IP-CIDR,8.8.8.8/32),(DST-PORT,53)),DIRECT
   - GEOSITE,private,DIRECT
   - GEOSITE,category-ir,DIRECT
@@ -28,4 +28,4 @@ rules:
   - GEOIP,ir,DIRECT,no-resolve
   - GEOIP,cn,DIRECT,no-resolve
   - GEOIP,ru,DIRECT,no-resolve
-  - MATCH,节点选择
+  - MATCH,🚀 节点选择
