@@ -17,8 +17,8 @@ proxy-groups:
 
 rules:
   #10.0.0.0/24和192.168.168.0/24为本人自用网段，可删除
-  - IP-CIDR,10.0.0.0/24,♻️ 自动选择
-  - IP-CIDR,192.168.168.0/24,♻️ 自动选择  
+  - IP-CIDR,10.0.0.0/24,自动选择
+  - IP-CIDR,192.168.168.0/24,自动选择  
   - AND,((IP-CIDR,8.8.8.8/32),(DST-PORT,53)),DIRECT
   - GEOSITE,private,DIRECT
   - GEOSITE,category-ir,DIRECT
