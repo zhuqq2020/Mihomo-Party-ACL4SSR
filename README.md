@@ -1,2 +1,2 @@
-# Mihomo-Party-ACL4SSR
-Mihomo Party的覆写库包含作者分享的和自己写的
+# ACL4SSR自用修改版
+Subscription Converter所使用自己修改的ACL4SSR库
