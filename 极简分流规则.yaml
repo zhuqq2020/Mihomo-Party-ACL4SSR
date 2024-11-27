@@ -13,7 +13,7 @@ proxy-groups:
     include-all: true
     exclude-filter: (?i)GB|Traffic|Expire|Premium|频道|订阅|ISP|流量|到期|重置|用户|官网
     url: https://www.gstatic.com/generate_204
-    interval: 30
+    interval: 300
     tolerance: 50
 
 rules:
