@@ -5,7 +5,7 @@
 # 增强中国IP段：支持
 # 增强国外GFW：支持
 # 基于ACL4SSR_Online_Full_AdblockPlus.ini制作
-# 制作日期:2024-11-21
+# 制作日期:2024-11-29
 
 proxy-groups:
   - name: 🚀 节点选择
