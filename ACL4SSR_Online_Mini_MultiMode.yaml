@@ -6,7 +6,7 @@
 # 增强中国IP段：不支持
 # 增强国外GFW：不支持
 # 基于ACL4SSR_Online_Mini_MultiMode.ini
-# 制作日期:2024-11-21
+# 制作日期:2024-11-29
 
 proxy-groups:
   - name: 🚀 节点选择
@@ -19,19 +19,19 @@ proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     include-all: true
-    interval: 300
-    tolerance: 50
+    interval: 60
+    tolerance: 20
 
   - name: 🔯 故障转移
     type: fallback
     include-all: true
-    interval: 180
+    interval: 60
 
   - name: 🔮 负载均衡
     type: load-balance
     include-all: true
     strategy: consistent-hashing
-    interval: 180
+    interval: 60
 
   - name: 🎯 全球直连
     type: select
