@@ -6,7 +6,8 @@
 # 增强中国IP段：不支持
 # 增强国外GFW：不支持
 # 基于ACL4SSR_Online_Mini_MultiMode.ini
-# 制作日期:2024-11-29
+# 制作日期:2024-12-19
+# 更新记录:1、负载均衡增加了散列模式
 
 proxy-groups:
   - name: 🚀 节点选择
@@ -14,7 +15,8 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - 🔯 故障转移
-      - 🔮 负载均衡
+      - 🔮 负载均衡(轮询)
+      - 🔮 负载均衡(散列)
       - DIRECT
   - name: ♻️ 自动选择
     type: url-test
@@ -27,11 +29,21 @@ proxy-groups:
     include-all: true
     interval: 60
 
-  - name: 🔮 负载均衡
+  - name: 🔮 负载均衡(轮询)
     type: load-balance
     include-all: true
+    interval: 300
+    max-failed-times: 3
+    strategy: round-robin
+    lazy: true    
+
+  - name: 🔮 负载均衡(散列)
+    type: load-balance
+    include-all: true
+    interval: 300
+    max-failed-times: 3
     strategy: consistent-hashing
-    interval: 60
+    lazy: true
 
   - name: 🎯 全球直连
     type: select
@@ -54,7 +66,8 @@ proxy-groups:
       - 🎯 全球直连
       - ♻️ 自动选择
       - 🔯 故障转移
-      - 🔮 负载均衡
+      - 🔮 负载均衡(轮询)
+      - 🔮 负载均衡(散列)
 
 rule-providers:
   LocalAreaNetwork:
