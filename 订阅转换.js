@@ -49,8 +49,6 @@ function getTestUrlForGroup(groupName) {
       return "https://claude.ai/";
     case "Spotify":
       return "https://www.spotify.com/";
-    case "Linux Do":
-      return "https://linux.do";
     default:
       return "http://www.gstatic.com/generate_204";
   }
@@ -60,8 +58,6 @@ function getIconForGroup(groupName) {
   switch (groupName) {
     case "Shared Chat":
       return "https://linux.do/user_avatar/linux.do/neo/144/12_2.png";
-    case "Linux Do":
-      return "https://linux.do/uploads/default/original/3X/9/d/9dd49731091ce8656e94433a26a3ef36062b3994.png";
     case "Steam":
       return "https://store.steampowered.com/favicon.ico";
     case "Telegram":
@@ -83,7 +79,6 @@ function getIconForGroup(groupName) {
 
 function overwriteRules(params) {
   const customRules = [
-    "DOMAIN-SUFFIX,linux.do,Linux Do",
     "DOMAIN-SUFFIX,shared.oaifree.com,Shared Chat"
   ];
   const rules = [
