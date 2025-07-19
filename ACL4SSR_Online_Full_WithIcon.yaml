@@ -24,7 +24,7 @@ proxy-groups:
     type: url-test
     include-all: true
     interval: 300
-    tolerance: 50
+    tolerance: 10
   - name: 电报消息
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
     type: select
