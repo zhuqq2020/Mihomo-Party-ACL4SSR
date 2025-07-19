@@ -21,7 +21,7 @@ proxy-groups:
     type: url-test
     include-all: true
     interval: 300
-    tolerance: 50
+    tolerance: 10
   - name: 📲 电报消息
     type: select
     proxies:
