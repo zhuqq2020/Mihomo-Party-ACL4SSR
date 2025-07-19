@@ -275,7 +275,7 @@ function overwriteProxyGroups(params) {
       type: "url-test",
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
-      tolerance: 50,
+      tolerance: 10,
       proxies: getProxiesByRegex(params, item.regex),
       hidden: true,
     }))
@@ -347,7 +347,7 @@ function overwriteProxyGroups(params) {
       type: "url-test",
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
-      tolerance: 50,
+      tolerance: 10,
       proxies: allProxies.length > 0 ? allProxies : ["DIRECT"],
       hidden: true,
     },
@@ -408,7 +408,7 @@ function overwriteProxyGroups(params) {
     type: "url-test",
     url: "http://www.gstatic.com/generate_204",
     interval: 300,
-    tolerance: 50,
+    tolerance: 10,
     proxies: otherProxies.length > 0 ? otherProxies : ["手动选择"],
     hidden: true,
   });
