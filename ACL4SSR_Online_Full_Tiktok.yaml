@@ -9,7 +9,7 @@
 # 增强国外GFW：支持
 # 增加Tiktok规则默认美国节点
 #制作日期：2024-11-21
-#更新日期：2023-03-19
+#更新日期：2025-07-19
 
 
 proxy-groups:
@@ -32,7 +32,7 @@ proxy-groups:
     type: url-test
     include-all: true
     interval: 300
-    tolerance: 50
+    tolerance: 10
   - name: 📲 电报消息
     type: select
     proxies:
