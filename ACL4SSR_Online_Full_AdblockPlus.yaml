@@ -34,20 +34,20 @@ proxy-groups:
     type: url-test
     include-all: true
     interval: 60
-    tolerance: 20
+    tolerance: 10
 
   - name: 🔯 故障转移
     type: fallback
     include-all: true
     interval: 60
-    tolerance: 20
+    tolerance: 10
 
   - name: 🔮 负载均衡(轮询)
     type: load-balance
     include-all: true
     strategy: round-robin
     interval: 60
-    tolerance: 20
+    tolerance: 10
     lazy: true 
     
   - name: 🔮 负载均衡(散列)
@@ -55,7 +55,7 @@ proxy-groups:
     include-all: true
     strategy: consistent-hashing
     interval: 60
-    tolerance: 20
+    tolerance: 10
     lazy: true     
 
   - name: 📲 电报消息
