@@ -1,5 +1,5 @@
 /* 制作日期：2024-12-20 */
-/* 更新日期：2025-07-19 */
+/* 更新日期：2025-07-31 */
 
 const proxyName = "代理模式";
 
@@ -276,7 +276,7 @@ function overwriteProxyGroups(params) {
       type: "url-test",
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
-      tolerance: 10,
+      tolerance: 60,
       proxies: getProxiesByRegex(params, item.regex),
       hidden: true,
     }))
@@ -348,7 +348,7 @@ function overwriteProxyGroups(params) {
       type: "url-test",
       url: "http://www.gstatic.com/generate_204",
       interval: 300,
-      tolerance: 10,
+      tolerance: 60,
       proxies: allProxies.length > 0 ? allProxies : ["DIRECT"],
       hidden: true,
     },
@@ -409,7 +409,7 @@ function overwriteProxyGroups(params) {
     type: "url-test",
     url: "http://www.gstatic.com/generate_204",
     interval: 300,
-    tolerance: 10,
+    tolerance: 60,
     proxies: otherProxies.length > 0 ? otherProxies : ["手动选择"],
     hidden: true,
   });
