@@ -7,7 +7,7 @@
 # 增强国外GFW：不支持
 # 基于ACL4SSR_Online_Mini_MultiMode.ini
 # 制作日期:2024-12-19
-# 更新时间:2025-03-19
+# 更新时间:2025-07-31
 # 更新日志：1、增加了负载均衡模式轮询和散列
 # 			2、修复规则下载链接的GitHub代理地址失效问题
 
@@ -24,7 +24,7 @@ proxy-groups:
     type: url-test
     include-all: true
     interval: 60
-    tolerance: 10
+    tolerance: 60
 
   - name: 🔯 故障转移
     type: fallback
@@ -36,7 +36,7 @@ proxy-groups:
     include-all: true
     strategy: round-robin
     interval: 60
-    tolerance: 10
+    tolerance: 60
     lazy: true 
     
   - name: 🔮 负载均衡(散列)
@@ -44,7 +44,7 @@ proxy-groups:
     include-all: true
     strategy: consistent-hashing
     interval: 60
-    tolerance: 10
+    tolerance: 60
     lazy: true     
 
   - name: 🎯 全球直连
