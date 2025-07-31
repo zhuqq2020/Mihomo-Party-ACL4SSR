@@ -6,7 +6,7 @@
 # 增强国外GFW：支持
 # 基于ACL4SSR_Online_Full_AdblockPlus.ini制作
 # 制作日期:2024-11-29
-# 更新时间:2025-07-19
+# 更新时间:2025-07-31
 # 更新日志：1、增加了负载均衡模式轮询和散列
 # 2、修复了Github代理失效问题
 
@@ -33,29 +33,29 @@ proxy-groups:
   - name: ♻️ 自动选择
     type: url-test
     include-all: true
-    interval: 60
-    tolerance: 10
+    interval: 300
+    tolerance: 60
 
   - name: 🔯 故障转移
     type: fallback
     include-all: true
-    interval: 60
-    tolerance: 10
+    interval: 300
+    tolerance: 60
 
   - name: 🔮 负载均衡(轮询)
     type: load-balance
     include-all: true
     strategy: round-robin
-    interval: 60
-    tolerance: 10
+    interval: 300
+    tolerance: 60
     lazy: true 
     
   - name: 🔮 负载均衡(散列)
     type: load-balance
     include-all: true
     strategy: consistent-hashing
-    interval: 60
-    tolerance: 10
+    interval: 300
+    tolerance: 60
     lazy: true     
 
   - name: 📲 电报消息
@@ -267,38 +267,38 @@ proxy-groups:
     include-all: true
     filter: (?i)港|HK|hk|Hong Kong|HongKong|hongkong
     type: url-test
-    interval: 60
-    tolerance: 20
+    interval: 300
+    tolerance: 60
   - name: 🇯🇵 日本节点
     include-all: true
     filter: (?i)日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan
     type: url-test
-    interval: 60
-    tolerance: 20
+    interval: 300
+    tolerance: 60
   - name: 🇺🇲 美国节点
     include-all: true
     filter: (?i)美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States
     type: url-test
-    interval: 60
-    tolerance: 20
+    interval: 300
+    tolerance: 60
   - name: 🇨🇳 台湾节点
     include-all: true
     filter: (?i)台|新北|彰化|TW|Taiwan
     type: url-test
-    interval: 60
-    tolerance: 20
+    interval: 300
+    tolerance: 60
   - name: 🇸🇬 狮城节点
     include-all: true
     filter: (?i)新加坡|坡|狮城|SG|Singapore
     type: url-test
-    interval: 60
-    tolerance: 20
+    interval: 300
+    tolerance: 60
   - name: 🇰🇷 韩国节点
     include-all: true
     filter: (?i)KR|Korea|KOR|首尔|韩|韓
     type: url-test
-    interval: 60
-    tolerance: 20
+    interval: 300
+    tolerance: 60
   - name: 🎥 奈飞节点
     include-all: true
     filter: (?i)NF|奈飞|解锁|Netflix|NETFLIX|Media
