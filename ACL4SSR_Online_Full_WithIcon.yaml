@@ -1,4 +1,4 @@
-# 更新时间:2025-07-19
+# 更新时间:2025-07-31
 # 更新日志：2、修复规则下载链接的GitHub代理地址失效问题
 
 proxy-groups:
@@ -24,7 +24,7 @@ proxy-groups:
     type: url-test
     include-all: true
     interval: 300
-    tolerance: 10
+    tolerance: 60
   - name: 电报消息
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure@master/IconSet/Color/Telegram.png
     type: select
