@@ -349,17 +349,17 @@ function overwriteProxyGroups(params) {
       ]
     },
     {
-      name: '🎯手动选择',
-      type: 'select',
-      proxies: [...sortedProxies, 'DIRECT']
-    },
-    {
       name: '🤖自动选择',
       type: 'url-test',
       url: 'http://www.gstatic.com/generate_204',
       interval: 300,
       tolerance: 50,
       proxies: sortedProxies
+    },
+    {
+      name: '🎯手动选择',
+      type: 'select',
+      proxies: [...sortedProxies, 'DIRECT']
     },
     {
       name: '🔀负载均衡(散列)',
@@ -398,4 +398,5 @@ function overwriteProxyGroups(params) {
   
   params['proxy-groups'] = groups;
 }
+
 
