@@ -341,8 +341,8 @@ function overwriteProxyGroups(params) {
       name: proxyName,
       type: 'select',
       proxies: [
-        '🎯手动选择',
         '🤖自动选择',
+        '🎯手动选择',
         '🔀负载均衡(散列)',
         '🔁负载均衡(轮询)',
         'DIRECT'
@@ -398,3 +398,4 @@ function overwriteProxyGroups(params) {
   
   params['proxy-groups'] = groups;
 }
+
